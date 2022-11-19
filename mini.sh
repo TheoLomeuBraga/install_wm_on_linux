@@ -37,9 +37,9 @@ comentarios_login_managers[2]="2) lxdm: leve"
 comentarios_login_managers[3]="3) slim: minimalista"
 
 comandos_login_managers=()
-comandos_login_managers[1]="sudo apt install sddm"
-comandos_login_managers[2]="sudo apt install lxdm"
-comandos_login_managers[3]="sudo apt install slim"
+comandos_login_managers[1]=" sddm"
+comandos_login_managers[2]=" lxdm"
+comandos_login_managers[3]=" slim"
 
 pegar_login_manager(){
     clear
@@ -60,8 +60,8 @@ comentarios_window_managers[1]="1) mate: leve e retro"
 comentarios_window_managers[2]="2) xfce4: leve e altamente customisavel"
 
 comandos_window_managers=()
-comandos_window_managers[1]="sudo apt install mate"
-comandos_window_managers[2]="sudo apt install xfce4"
+comandos_window_managers[1]=" mate"
+comandos_window_managers[2]=" xfce4"
 
 pegar_window_manager(){
     clear
@@ -82,19 +82,25 @@ pegar_info(){
 
 installar(){
     clear
+    comando_instalacao="sudo apt install "
     
-    eval ${comandos_login_managers[login_manager_selecionado]}
+    comando_instalacao+=${comandos_login_managers[login_manager_selecionado]}
+    comando_instalacao+=${comandos_window_managers[window_manager_selecionado]}
 
     echo instalar extras Y/N
     read instalar_extras
 
-    sudo apt install xorg firefox
+    
+    comando_instalacao+=" xorg firefox"
 
     if [ "$instalar_extras" = "$Y" ] | [ "$instalar_extras" = "$y" ]
     then
-        sudo apt install gnome-software
+        comando_instalacao+=" gnome-software"
     fi
     
+
+    eval comando_instalacao
+
     clear
     echo instalação completa gostaria de reiniciar ? Y/N
     read reiniciar
@@ -102,6 +108,18 @@ installar(){
     then
         sudo rebot
     fi
+
+    
+    echo o comando de instalação foi ${comando_instalacao}
+
+    a='obri'
+    b='gado'
+    c="${a} ${b}"
+    echo "${c}"
+    echo aperte enter para continuar
+    read a
+
+
 }
 
 
