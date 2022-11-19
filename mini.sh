@@ -32,7 +32,7 @@ login_manager_selecionado=0
 quantidade_login_managers=3
 
 comentarios_login_managers=()
-comentarios_login_managers[1]="1) sddm: bonito leve e elegante (recomandado ;] )"
+comentarios_login_managers[1]="1) sddm: bonito, leve e elegante (recomandado ;] )"
 comentarios_login_managers[2]="2) lxdm: leve"
 comentarios_login_managers[3]="3) slim: minimalista"
 
@@ -58,10 +58,14 @@ quantidade_window_managers=3
 comentarios_window_managers=()
 comentarios_window_managers[1]="1) mate: leve e retro"
 comentarios_window_managers[2]="2) xfce4: leve e altamente customisavel"
+comentarios_window_managers[3]="3) kde: bonito"
+comentarios_window_managers[4]="4) cinnamon: bonito e parecido com o windows"
 
 comandos_window_managers=()
 comandos_window_managers[1]=" mate"
 comandos_window_managers[2]=" xfce4"
+comandos_window_managers[3]=" kde-full"
+comandos_window_managers[4]=" cinnamon"
 
 pegar_window_manager(){
     clear
@@ -108,9 +112,6 @@ installar(){
     then
         comando_iniciar_janela="sudo "
         comando_iniciar_janela+=${comandos_login_managers[login_manager_selecionado]}
-         
-        echo comando_iniciar_janela
-        echo $comando_iniciar_janela
     fi
 
     
