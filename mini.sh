@@ -45,6 +45,7 @@ comandos_login_managers[4]=" lightdm"
 
 pegar_login_manager(){
     clear
+    echo escolha o seu gerenciator de login
     for counter in $(seq 1 $quantidade_login_managers)
     do
         echo ${comentarios_login_managers[counter]}
@@ -76,6 +77,7 @@ comandos_window_managers[6]=" ubuntu-unity-desktop"
 
 pegar_window_manager(){
     clear
+    echo escolha o seu gerenciator de janela
     for counter in $(seq 1 $quantidade_window_managers)
     do
         echo ${comentarios_window_managers[counter]}
@@ -118,6 +120,7 @@ installar(){
         comando_iniciar_janela="sudo "
         comando_iniciar_janela+=${comandos_login_managers[login_manager_selecionado]}
         eval $comando_iniciar_janela
+        clear
     fi
 
 }
