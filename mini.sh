@@ -53,7 +53,7 @@ pegar_login_manager(){
 
 window_manager_selecionado=0
 
-quantidade_window_managers=3
+quantidade_window_managers=4
 
 comentarios_window_managers=()
 comentarios_window_managers[1]="1) mate: leve e retro"
@@ -115,11 +115,7 @@ installar(){
     fi
 
     
-    echo o comando de instalação foi ${comando_instalacao}
-
     
-    echo aperte enter para continuar
-    read a
 
 
 }
