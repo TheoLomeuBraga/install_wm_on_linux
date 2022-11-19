@@ -59,13 +59,13 @@ window_manager_selecionado=1
 quantidade_window_managers=7
 
 comentarios_window_managers=()
-comentarios_window_managers[1]="1) mate: leve e retro"
+comentarios_window_managers[1]="1) mate: retro e leve"
 comentarios_window_managers[2]="2) xfce4: leve e altamente customisavel"
 comentarios_window_managers[3]="3) kde: bonito"
 comentarios_window_managers[4]="4) cinnamon: bonito e parecido com o windows"
 comentarios_window_managers[5]="5) lxdm: simples e leve"
 comentarios_window_managers[6]="6) unity: bonito e parecido com o gnome (do ubuntu)"
-comentarios_window_managers[7]="7) x window system: antigo e leve"
+comentarios_window_managers[7]="7) fvwm: antigo e leve"
 
 comandos_window_managers=()
 comandos_window_managers[1]=" mate"
@@ -74,7 +74,7 @@ comandos_window_managers[3]=" kde-full"
 comandos_window_managers[4]=" cinnamon"
 comandos_window_managers[5]=" lxdm"
 comandos_window_managers[6]=" ubuntu-unity-desktop"
-comandos_window_managers[7]=" x-window-system"
+comandos_window_managers[7]=" fvwm"
 
 
 pegar_window_manager(){
@@ -111,6 +111,8 @@ installar(){
     then
         comando_instalacao+=" gnome-software neofetch vim"
     fi
+
+    sudo apt install update
 
     eval $comando_instalacao
 
