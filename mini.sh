@@ -92,7 +92,9 @@ pegar_info(){
 }
 
 
-
+adicionar_repositorios(){
+    sudo apt-get install software-properties-common
+}
 
 
 installar(){
@@ -130,5 +132,6 @@ installar(){
 }
 
 pegar_info
+adicionar_repositorios
 installar
 
