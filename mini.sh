@@ -107,7 +107,7 @@ installar(){
 
     if [ $instalar_extras == "Y" ] || [ $instalar_extras == "y" ]
     then
-        comando_instalacao+=" gnome-software"
+        comando_instalacao+=" gnome-software neofetch vim"
     fi
 
     eval $comando_instalacao
