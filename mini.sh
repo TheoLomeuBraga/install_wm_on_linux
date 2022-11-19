@@ -116,22 +116,31 @@ installar(){
 
     sudo apt install update
 
-    eval $comando_instalacao
-
-    clear
-    echo instalação completa gostaria de iniciar o login manager ? Y/N
-    read iniciar
-    if [ $iniciar == "Y" ] || [ $iniciar == "y" ]
+    echo configiração completa deseja instalar ? Y/N
+    read deve_instalar
+    if [ $deve_instalar == "Y" ] || [ $deve_instalar == "y" ]
     then
-        comando_iniciar_janela="sudo "
-        comando_iniciar_janela+=${comandos_login_managers[login_manager_selecionado]}
-        eval $comando_iniciar_janela
+        eval $comando_instalacao
+
         clear
+        echo instalação completa gostaria de iniciar o login manager ? Y/N
+        read iniciar
+        if [ $iniciar == "Y" ] || [ $iniciar == "y" ]
+        then
+            comando_iniciar_janela="sudo "
+            comando_iniciar_janela+=${comandos_login_managers[login_manager_selecionado]}
+            eval $comando_iniciar_janela
+            clear
+        fi
     fi
+
+    
 
 }
 
 pegar_info
 adicionar_repositorios
 installar
+
+
 
