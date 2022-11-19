@@ -93,7 +93,6 @@ installar(){
 
     echo instalar extras Y/N
     read instalar_extras
-
     
     comando_instalacao+=" xorg firefox"
 
@@ -101,7 +100,6 @@ installar(){
     then
         comando_instalacao+=" gnome-software"
     fi
-    
 
     eval $comando_instalacao
 
@@ -114,14 +112,7 @@ installar(){
         comando_iniciar_janela+=${comandos_login_managers[login_manager_selecionado]}
     fi
 
-    
-    
-
-
 }
-
-
-
 
 pegar_info
 installar

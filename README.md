@@ -7,3 +7,7 @@ sudo apt install git
 git clone https://github.com/TheoLomeuBraga/install_wm_on_linux.git
 cd install_wm_on_linux
 sudo bash mini.sh
+
+ou
+
+sudo apt install git;git clone https://github.com/TheoLomeuBraga/install_wm_on_linux.git;cd install_wm_on_linux;sudo bash mini.sh
