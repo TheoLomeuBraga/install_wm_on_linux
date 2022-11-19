@@ -77,8 +77,6 @@ pegar_info(){
 
 installar(){
     clear
-
-    
     
     eval ${comandos_login_managers[login_manager_selecionado]}
 
@@ -92,6 +90,7 @@ installar(){
         sudo apt install gnome-software
     fi
     
+    clear
     echo instalação completa gostaria de reiniciar ? Y/N
     read reiniciar
     if [ "$reiniciar" = "$Y" ] | [ "$reiniciar" = "$y" ]
