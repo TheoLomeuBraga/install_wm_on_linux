@@ -1,4 +1,4 @@
-#!/bin/sh 
+#!/bin/bash 
 
 #repositorio horiginal
 #https://github.com/TheoLomeuBraga/install_wm_on_linux.git
