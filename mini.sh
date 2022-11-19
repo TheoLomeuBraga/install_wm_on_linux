@@ -27,19 +27,21 @@ e_letra_ret=0
 
 
 
-login_manager_selecionado=0
+login_manager_selecionado=1
 
-quantidade_login_managers=3
+quantidade_login_managers=4
 
 comentarios_login_managers=()
 comentarios_login_managers[1]="1) sddm: bonito, leve e elegante (recomandado ;] )"
-comentarios_login_managers[2]="2) lxdm: leve"
+comentarios_login_managers[2]="2) lxdm: leve (pode ter problemans com o xfce)"
 comentarios_login_managers[3]="3) slim: minimalista"
+comentarios_login_managers[4]="4) lightDM: elegante"
 
 comandos_login_managers=()
 comandos_login_managers[1]=" sddm"
 comandos_login_managers[2]=" lxdm"
 comandos_login_managers[3]=" slim"
+comandos_login_managers[4]=" lightdm"
 
 pegar_login_manager(){
     clear
@@ -51,21 +53,26 @@ pegar_login_manager(){
 }
 
 
-window_manager_selecionado=0
+window_manager_selecionado=1
 
-quantidade_window_managers=4
+quantidade_window_managers=6
 
 comentarios_window_managers=()
 comentarios_window_managers[1]="1) mate: leve e retro"
 comentarios_window_managers[2]="2) xfce4: leve e altamente customisavel"
 comentarios_window_managers[3]="3) kde: bonito"
 comentarios_window_managers[4]="4) cinnamon: bonito e parecido com o windows"
+comentarios_window_managers[5]="5) lxdm: simples e leve"
+comentarios_window_managers[6]="6) unity: bonito e parecido com o gnome (do ubuntu)"
 
 comandos_window_managers=()
 comandos_window_managers[1]=" mate"
 comandos_window_managers[2]=" xfce4"
 comandos_window_managers[3]=" kde-full"
 comandos_window_managers[4]=" cinnamon"
+comandos_window_managers[5]=" lxdm"
+comandos_window_managers[6]=" ubuntu-unity-desktop"
+
 
 pegar_window_manager(){
     clear
@@ -110,6 +117,7 @@ installar(){
     then
         comando_iniciar_janela="sudo "
         comando_iniciar_janela+=${comandos_login_managers[login_manager_selecionado]}
+        eval $comando_iniciar_janela
     fi
 
 }
