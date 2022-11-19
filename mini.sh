@@ -93,7 +93,7 @@ installar(){
     
     comando_instalacao+=" xorg firefox"
 
-    if [ "$instalar_extras" = "$Y" ] | [ "$instalar_extras" = "$y" ]
+    if [ $instalar_extras == "Y" ] || [ $instalar_extras == "y" ]
     then
         comando_instalacao+=" gnome-software"
     fi
@@ -102,20 +102,21 @@ installar(){
     eval $comando_instalacao
 
     clear
-    echo instalação completa gostaria de reiniciar ? Y/N
-    read reiniciar
-    if [ "$reiniciar" = "$Y" ] | [ "$reiniciar" = "$y" ]
+    echo instalação completa gostaria de iniciar o login manager ? Y/N
+    read iniciar
+    if [ $iniciar == "Y" ] || [ $iniciar == "y" ]
     then
-        sudo rebot
+        comando_iniciar_janela="sudo "
+        comando_iniciar_janela+=${comandos_login_managers[login_manager_selecionado]}
+         
+        echo comando_iniciar_janela
+        echo $comando_iniciar_janela
     fi
 
     
     echo o comando de instalação foi ${comando_instalacao}
 
-    a='obri'
-    b='gado'
-    c="${a} ${b}"
-    echo "${c}"
+    
     echo aperte enter para continuar
     read a
 
