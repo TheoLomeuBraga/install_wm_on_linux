@@ -3,6 +3,7 @@
 #repositorio horiginal
 #https://github.com/TheoLomeuBraga/install_wm_on_linux.git
 
+
 e_numero(){
     re='^[0-9]+$'
     if ! [[ $1 =~ $re ]] ; then
