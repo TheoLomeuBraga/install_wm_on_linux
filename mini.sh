@@ -83,7 +83,7 @@ pegar_info(){
 installar(){
     clear
     comando_instalacao="sudo apt install "
-    
+
     comando_instalacao+=${comandos_login_managers[login_manager_selecionado]}
     comando_instalacao+=${comandos_window_managers[window_manager_selecionado]}
 
@@ -99,7 +99,7 @@ installar(){
     fi
     
 
-    eval comando_instalacao
+    eval $comando_instalacao
 
     clear
     echo instalação completa gostaria de reiniciar ? Y/N
