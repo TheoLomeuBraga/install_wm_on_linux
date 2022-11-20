@@ -98,28 +98,32 @@ adicionar_repositorios(){
 
 
 installar(){
-    clear
-    comando_instalacao="sudo apt install "
+    
+    comando_instalacao="sudo apt install xorg firefox "
 
     comando_instalacao+=${comandos_login_managers[login_manager_selecionado]}
     comando_instalacao+=${comandos_window_managers[window_manager_selecionado]}
 
+    clear
     echo instalar extras Y/N
     read instalar_extras
     
-    comando_instalacao+=" xorg firefox"
+    
 
     if [ $instalar_extras == "Y" ] || [ $instalar_extras == "y" ]
     then
-        comando_instalacao+=" gnome-software neofetch vim"
+        comando_instalacao+=" gnome-software discover discover neofetch vim "
     fi
 
-    sudo apt install update
+    
 
+    clear
     echo configiração completa deseja instalar ? Y/N
     read deve_instalar
     if [ $deve_instalar == "Y" ] || [ $deve_instalar == "y" ]
     then
+        adicionar_repositorios
+        sudo apt install update
         eval $comando_instalacao
 
         clear
@@ -139,8 +143,11 @@ installar(){
 }
 
 pegar_info
-adicionar_repositorios
 installar
 
+<<<<<<< HEAD
+=======
 
 
+
+>>>>>>> ee3185606e25a1c9fd6ac0af5a093f4e72131de5
