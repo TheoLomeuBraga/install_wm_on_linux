@@ -110,7 +110,7 @@ installar(){
 
     if [ $instalar_extras == "Y" ] || [ $instalar_extras == "y" ]
     then
-        comando_instalacao+=" gnome-software discover discover neofetch vim "
+        comando_instalacao+=" ubuntu-standard gnome-software discover discover neofetch vim "
     fi
 
     
