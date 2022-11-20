@@ -97,7 +97,7 @@ adicionar_repositorios(){
 
 installar(){
     
-    comando_instalacao="sudo apt install xorg firefox "
+    comando_instalacao="sudo apt install xorg firefox ubuntu-standard "
 
     comando_instalacao+=${comandos_login_managers[login_manager_selecionado]}
     comando_instalacao+=${comandos_window_managers[window_manager_selecionado]}
@@ -110,7 +110,7 @@ installar(){
 
     if [ $instalar_extras == "Y" ] || [ $instalar_extras == "y" ]
     then
-        comando_instalacao+=" ubuntu-standard gnome-software discover discover neofetch vim "
+        comando_instalacao+=" gnome-software discover discover neofetch vim "
     fi
 
     
