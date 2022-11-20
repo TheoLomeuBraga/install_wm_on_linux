@@ -56,7 +56,7 @@ pegar_login_manager(){
 
 window_manager_selecionado=1
 
-quantidade_window_managers=7
+quantidade_window_managers=6
 
 comentarios_window_managers=()
 comentarios_window_managers[1]="1) mate: retro e leve"
@@ -65,7 +65,6 @@ comentarios_window_managers[3]="3) kde: bonito"
 comentarios_window_managers[4]="4) cinnamon: bonito e parecido com o windows"
 comentarios_window_managers[5]="5) lxdm: simples e leve"
 comentarios_window_managers[6]="6) unity: bonito e parecido com o gnome (do ubuntu)"
-comentarios_window_managers[7]="7) fvwm: antigo e leve"
 
 comandos_window_managers=()
 comandos_window_managers[1]=" mate"
@@ -74,7 +73,6 @@ comandos_window_managers[3]=" kde-full"
 comandos_window_managers[4]=" cinnamon"
 comandos_window_managers[5]=" lxdm"
 comandos_window_managers[6]=" ubuntu-unity-desktop"
-comandos_window_managers[7]=" fvwm"
 
 
 pegar_window_manager(){
